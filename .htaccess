@@ -1,0 +1,15 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /SunuVolaille2017/
+RewriteRule ^index\.php$ - [L]
+RewriteRule ^wekeepthefaith/?$ /SunuVolaille2017/wp-login.php [QSA,L]
+RewriteRule ^wekeepthefaith/register/?$ /SunuVolaille2017/wp-login.php?action=register [QSA,L]
+RewriteRule ^wekeepthefaith/lostpassword/?$ /SunuVolaille2017/wp-login.php?action=lostpassword [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /SunuVolaille2017/index.php [L]
+</IfModule>
+
+# END WordPress
